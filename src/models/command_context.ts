@@ -7,10 +7,10 @@ export default class CommandContext {
     /** The extracted command arguments. */
     readonly arguments: string[];
 
-    constructor(private readonly prefix: string, readonly originalMessage: Message) {
+    constructor(readonly prefix: string, readonly originalMessage: Message) {
         /** The raw invocation, that is, the command name plus the arguments.  */
         const invocation = originalMessage.content.slice(prefix.length).trim().split(/ +/);
-        
+    
         this.invokedCommand = invocation.shift()?.toLowerCase() ?? "";
         this.arguments = invocation;
     }
