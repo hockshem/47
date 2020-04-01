@@ -1,23 +1,18 @@
 require('dotenv').config();
 import Discord = require("discord.js");
-import Config = require("./config.json");
 import CommandHandler from "./command_handler";
+import config = require("./config.json");
+import { validateEnvEntry } from "./utils/validation_util"; 
 
 const client = new Discord.Client();
-const token = process.env.TOKEN;
-
-try { 
-  validateToken(token);
-} catch (error) {
-  console.error(`Encountered an error while validating token: ${error.message}`);
-}
+const token = validateEnvEntry(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
   console.log("47 is online.");
 });
 
 client.on("message", (message) => {
-  CommandHandler.handleCommand(Config.prefix, message);
+  CommandHandler.handleCommand(config.prefix, message);
 });
 
 client.on("error", (error) => {
@@ -25,9 +20,3 @@ client.on("error", (error) => {
 });
 
 client.login(token);
-
-function validateToken(token: string | undefined ) {
-  if (!token) {
-    throw new Error("Invalid bot token.");
-  }
-}
