@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "npm run build-ts && npm run start",
+    "build-ts": "tsc",
+    "start": "node dist/index.js"
   },
   "author": "Hock Shem",
   "license": "ISC",
