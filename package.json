@@ -9,7 +9,7 @@
     "postinstall": "npm run build"
   },
   "engines": {
-    "node": "v13.12.x"
+    "node": "13.12.x"
   },
   "author": "Hock Shem",
   "license": "ISC",
