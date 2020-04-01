@@ -8,6 +8,9 @@
     "build": "tsc",
     "postinstall": "npm run build"
   },
+  "engines": {
+    "node": "v13.12.x"
+  },
   "author": "Hock Shem",
   "license": "ISC",
   "dependencies": {
