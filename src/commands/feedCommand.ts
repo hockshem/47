@@ -44,7 +44,6 @@ export default class CovidFeedCommand implements Command {
             .then((feed) => {
                 const thumbnailUrl = "https://s3-eu-west-2.amazonaws.com/north-live/wp-content/uploads/2020/03/05163005/Coronavirus-Thumbnail-Image.jpg";
 
-                // TODO: Could be moved to inside util.
                 const feedEmbed = new Discord.MessageEmbed()
                     .setColor('#008080')
                     .setTitle(`${feed.countryName}'s COVID-19 Updates`)
@@ -54,9 +53,9 @@ export default class CovidFeedCommand implements Command {
                         { name: "Active Cases", value: `${feed.activeCases}` },
                         { name: "Total Cases", value: `${feed.totalCases}`, inline: true },
                         { name: "Total Deaths", value: `${feed.totalDeaths}`, inline: true },
+                        { name: "Total Recovered", value: `${feed.totalRecovered}`, inline: true },
                         { name: "New Cases", value: `${feed.newCases}`, inline: true },
                         { name: "New Deaths", value: `${feed.newDeaths}`, inline: true },
-                        { name: "Total Recovered", value: `${feed.totalRecovered}`, inline: true },
                         { name: "Serious Critical", value: `${feed.seriousCritical}`, inline: true },
                     )
                     .setThumbnail(thumbnailUrl)
