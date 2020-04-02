@@ -7,7 +7,7 @@ import CovidFeed from "../models/covid_feed";
 import Discord = require('discord.js');
 
 export default class CovidFeedCommand implements Command {
-    aliases = ["coronaupdate", "coronavirusupdate", "covidupdate", "covid19update"];
+    aliases = ["coronavirusupdate", "coronaupdate", "cv"];
 
     private readonly apiKey: string;
 
@@ -69,7 +69,7 @@ export default class CovidFeedCommand implements Command {
 
     // TODO: Update help message for each command.
     helpMessage(prefix: string): string {
-        return `Use ${prefix} ${this.aliases[0]} <country_name> to get the latest update of coronavirus in the country.`;
+        return `Use ${prefix} CoronaUpdate <country_name> to get the latest update of coronavirus in the country.`;
     }
 
 }
