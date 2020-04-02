@@ -1,24 +1,29 @@
 {
   "name": "47",
   "version": "1.0.0",
-  "description": "",
+  "description": "My dear 47.",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hockshem/47"
+  },
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc",
-    "postinstall": "npm run build"
+    "heroku-postbuild": "tsc",
+    "start": "node dist/index.js"
   },
   "engines": {
     "node": "12.16.1"
   },
-  "author": "Hock Shem",
+  "author": "Hock Shem <hockshem.c@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^13.9.8",
     "@types/ws": "^7.2.3",
     "axios": "^0.19.2",
     "discord.js": "^12.1.1",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
     "typescript": "^3.7.2"
   }
 }
