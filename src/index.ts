@@ -11,13 +11,7 @@ client.on("ready", () => {
   console.log("47 is online.");
 });
 
-client.on("message", async (message) => {
-  if (message.content === "I love you") {
-    if (isBotOwner(message.author)) {
-      await message.reply("I love you too. <3");
-      return;
-    }
-  }
+client.on("message", (message) => {
   CommandHandler.handleCommand(config.prefix, message);
 });
 
@@ -26,8 +20,3 @@ client.on("error", (error) => {
 });
 
 client.login(token);
-
-async function isBotOwner(user: Discord.User) {
-  const owner = await client.users.fetch("378048007599423491");
-  return user === owner;
-}
