@@ -2,7 +2,7 @@ require('dotenv').config();
 import Discord = require("discord.js");
 import CommandHandler from "./command_handler";
 import config = require("./config.json");
-import { validateEnvEntry } from "./utils/validation_util"; 
+import { validateEnvEntry } from "./utils/validator"; 
 
 const client = new Discord.Client();
 const token = validateEnvEntry(process.env.BOT_TOKEN);

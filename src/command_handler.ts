@@ -1,6 +1,6 @@
 import CommandContext from "./models/command_context";
 import Command from "./commands/command";
-import CovidFeedCommand from "./commands/feed";
+import CovidFeedCommand from "./commands/feedCommand";
 import { Message } from "discord.js";
 
 export default class CommandHandler {

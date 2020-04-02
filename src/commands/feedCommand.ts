@@ -2,8 +2,8 @@ require('dotenv').config();
 import CommandContext from "../models/command_context";
 import Command from "./command";
 import Axios from "axios";
-import { validateEnvEntry } from "../utils/validation_util";
-import CovidFeed from "../models/covid_feed";
+import { validateEnvEntry } from "../utils/validator";
+import CovidFeed from "../models/serializable_models/covid_feed";
 import Discord = require('discord.js');
 
 export default class CovidFeedCommand implements Command {
