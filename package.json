@@ -8,8 +8,8 @@
     "url": "https://github.com/hockshem/47"
   },
   "scripts": {
-    "heroku-postbuild": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "jest"
   },
   "engines": {
     "node": "12.16.1"
@@ -21,9 +21,19 @@
     "@types/ws": "^7.2.3",
     "axios": "^0.19.2",
     "discord.js": "^12.1.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "module-alias": "^2.2.2"
   },
   "devDependencies": {
-    "typescript": "^3.7.2"
+    "@types/jest": "^25.2.1",
+    "jest": "^25.2.7",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "_moduleAliases": {
+    "@models": "dist/models",
+    "@serializables": "dist/models/serializable_models",
+    "@utils": "dist/utils",
+    "@commands": "dist/commands"
   }
 }
