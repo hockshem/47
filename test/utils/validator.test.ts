@@ -1,5 +1,5 @@
 import 'module-alias/register';
-import { validateEnvEntry } from "@utils/validator";
+import { validateEnvEntry } from '@utils/validator';
 
 describe("Validator", () => {
     test("should return error when the entry is undefined", () => {

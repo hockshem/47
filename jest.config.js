@@ -5,8 +5,6 @@ module.exports = {
   testEnvironment: 'node',
   verbose: true,
   testMatch: ['**/test/**/*.test.(ts|js)'],
-  moduleNameMapper: {
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths)
-  }, 
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   moduleDirectories: ['node_modules', '.']
 };
