@@ -8,7 +8,7 @@
     "url": "https://github.com/hockshem/47"
   },
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/src/index.js",
     "test": "jest",
     "heroku-postbuild": "tsc"
   },
