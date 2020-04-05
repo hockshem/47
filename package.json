@@ -2,7 +2,7 @@
   "name": "47",
   "version": "1.0.0",
   "description": "My dear 47.",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/hockshem/47"
@@ -10,7 +10,6 @@
   "scripts": {
     "start": "node dist/index.js",
     "test": "jest",
-    "heroku-prebuild": "npm install",
     "heroku-postbuild": "tsc"
   },
   "engines": {
