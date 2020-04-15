@@ -1,11 +1,14 @@
 import CommandContext from "./models/command_context";
 import Command from "./commands/command";
 import CovidFeedCommand from "./commands/feedCommand";
+import AskCommand from "./commands/feedCommand";
 import { Message } from "discord.js";
 
 export default class CommandHandler {
+    // TODO: Automate this
     private static commands: Command[] = [
-        new CovidFeedCommand()
+        new CovidFeedCommand(),
+        new AskCommand()
     ];
 
     static async handleCommand(prefix: string, message: Message): Promise<void> {
