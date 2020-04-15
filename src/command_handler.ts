@@ -1,7 +1,7 @@
 import CommandContext from "./models/command_context";
 import Command from "./commands/command";
 import CovidFeedCommand from "./commands/feedCommand";
-import AskCommand from "./commands/feedCommand";
+import AskCommand from "./commands/askCommand";
 import { Message } from "discord.js";
 
 export default class CommandHandler {
@@ -17,7 +17,6 @@ export default class CommandHandler {
         }
 
         const commandContext = new CommandContext(prefix, message);
-
         const matchedCommand = this.commands.find((command) => command.aliases.includes(commandContext.invokedCommand));
         const allowedCommands = this.commands.filter((command) => command.hasPermissionToExecute(commandContext));
 
