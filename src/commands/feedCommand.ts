@@ -22,8 +22,10 @@ export default class CovidFeedCommand implements Command {
 
     // TODO: Move the http client to a higher level. 
     async execute(context: CommandContext): Promise<void> {
+        // TODO: Change the default to Malaysia
         if (context.arguments.length == 0) {
             await context.originalMessage.reply(this.helpMessage(context.prefix));
+            return;
         }
 
         const targetUrl: string = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php";

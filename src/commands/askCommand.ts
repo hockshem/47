@@ -1,7 +1,7 @@
 import Command from "./command";
 import CommandContext from "../models/command_context";
 
-class AskCommand implements Command {
+export default class AskCommand implements Command {
     aliases = ["ask"];
     
     hasPermissionToExecute(context: CommandContext): boolean {
